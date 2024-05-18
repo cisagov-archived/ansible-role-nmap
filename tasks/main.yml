@@ -13,10 +13,6 @@
       ansible.builtin.include_role:
         name: backports
 
-    - name: Update the apt cache
-      ansible.builtin.apt:
-        update_cache: true
-
     - name: Install nmap
       ansible.builtin.apt:
         default_release: "{{ ansible_distribution_release }}-backports"
